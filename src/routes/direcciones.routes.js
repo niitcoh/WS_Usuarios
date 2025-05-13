@@ -3,7 +3,7 @@ const router = express.Router();
 const direccionesController = require('../controllers/direcciones.controller');
 const authMiddleware = require('../middleware/auth.middleware');
 
-// Todas las rutas requieren autenticación
+// Aplicar middleware de autenticación a todas las rutas
 router.use(authMiddleware.verificarToken);
 
 // Rutas de direcciones
